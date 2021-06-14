@@ -51,6 +51,13 @@ new ODataRequestRead(servicePath, entityName, encodedQuery, ODataProtocol.V4);
 new ODataRequestRead("/path/to/service", "A_Entity", "$select=Foo%20Bar", ODataProtocol.V4);
 ```
 
+If you have the StructuredQuery object, you can also use:
+```java
+new ODataRequestRead(servicePath, structQuery);
+// e.g.
+new ODataRequestRead("/path/to/service", StructuredQuery);
+```
+
 :::tip
 Encoded queries can be created conveniently as described in [Building Queries below](#building-queries).
 :::
